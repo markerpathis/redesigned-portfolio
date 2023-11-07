@@ -1,0 +1,1 @@
+export default "I'm a recent coding bootcamp grad, seeking a career as a full-stack developer. The coding bootcamp I completed was through the University of Washington (September 2022 - March 2023). Check out the portfolio below.";

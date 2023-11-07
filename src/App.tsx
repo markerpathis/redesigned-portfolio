@@ -1,34 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { VStack, Text, Box, Flex } from "@chakra-ui/layout";
+import { Image } from "@chakra-ui/image";
+
+import HeadingMain from "./components/HeadingMain";
+import ParkerPicture from "./assets/parkerImage.png";
+import IntroText from "./content/intro";
+import HeadingSecondary from "./components/HeadingSecondary";
+import SkillsText from "./content/Skills";
+import AboutText from "./content/about";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <>
+      <Box w="100%" paddingY="50px">
+        <Flex justifyContent="center" alignItems="center">
+          <Image boxSize="25%" borderRadius={8} src={ParkerPicture} />
+
+          <VStack boxSize="50%" alignItems="start" paddingLeft={5}>
+            <HeadingMain />
+            <Text>{IntroText}</Text>
+            <Text>{AboutText}</Text>
+
+            <HeadingSecondary>Skills</HeadingSecondary>
+            <Text>{SkillsText}</Text>
+          </VStack>
+        </Flex>
+      </Box>
+    </>
+  );
 }
 
-export default App
+export default App;
