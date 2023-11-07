@@ -7,7 +7,7 @@ interface Props {
 
 const HeadingSecondary = ({ children }: Props) => {
   return (
-    <Heading as="h2" fontSize="2xl" paddingTop={2}>
+    <Heading as="h2" fontSize="4xl" paddingTop={2}>
       {children}
     </Heading>
   );
