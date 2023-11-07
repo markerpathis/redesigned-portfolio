@@ -1,4 +1,4 @@
-import { VStack, Text, Box, Flex } from "@chakra-ui/layout";
+import { VStack, Text, Box, Flex, HStack } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
 
 import HeadingMain from "./components/HeadingMain";
@@ -7,10 +7,12 @@ import IntroText from "./content/intro";
 import HeadingSecondary from "./components/HeadingSecondary";
 import SkillsText from "./content/Skills";
 import AboutText from "./content/about";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <>
+      <NavBar />
       <Box w="100%" paddingY="50px">
         <Flex justifyContent="center" alignItems="center">
           <Image boxSize="25%" borderRadius={8} src={ParkerPicture} />
