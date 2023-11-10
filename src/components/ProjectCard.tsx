@@ -1,19 +1,30 @@
 import React from "react";
 import { Card, CardBody, Image, Heading, Text, HStack } from "@chakra-ui/react";
 
-import projectImage from "../assets/project-nomdotcom.png";
+interface Props {
+  project: Project;
+}
 
-const ProjectCard = () => {
+interface Project {
+  title: string;
+  date: string;
+  description: string;
+  deployedUrl: string;
+  githubUrl: string;
+  image: string;
+}
+
+const ProjectCard = ({ project }: Props) => {
   return (
     <>
-      <Card>
-        <Image src={projectImage} />
+      <Card width="300px">
+        <Image src={project.image} />
         <CardBody>
-          <Heading fontSize="2xl">Nom Dot Com</Heading>
+          <Heading fontSize="2xl">{project.title}</Heading>
           <Heading fontSize="1xl" paddingY={3}>
-            May 2023
+            {project.date}
           </Heading>
-          <Text>This React app allows users to save, edit, and search for recipes.</Text>
+          <Text>{project.description}</Text>
         </CardBody>
       </Card>
     </>

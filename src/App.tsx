@@ -1,6 +1,5 @@
 import { VStack, Text, Box, Flex, HStack, Heading, Center } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
-
 import HeadingMain from "./components/HeadingMain";
 import ParkerPicture from "./assets/parkerImage.png";
 import IntroText from "./content/intro";
@@ -8,7 +7,7 @@ import HeadingSecondary from "./components/HeadingSecondary";
 import SkillsText from "./content/Skills";
 import AboutText from "./content/about";
 import NavBar from "./components/NavBar";
-import ProjectCard from "./components/ProjectCard";
+import ProjectGrid from "./components/ProjectGrid";
 
 function App() {
   return (
@@ -27,14 +26,13 @@ function App() {
             <Text>{SkillsText}</Text>
           </VStack>
         </Flex>
+        
         <Center paddingTop={8}>
           <VStack>
             <Heading as="h1" fontSize="4xl" paddingBottom={4}>
               Portfolio
             </Heading>
-            <Box width="300px">
-              <ProjectCard />
-            </Box>
+            <ProjectGrid />
           </VStack>
         </Center>
       </Box>
