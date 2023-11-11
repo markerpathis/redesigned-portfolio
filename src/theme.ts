@@ -20,6 +20,10 @@ const theme = extendTheme({
       900: "#11111",
     },
   },
+  fonts: {
+    heading: `'Montserrat', sans-serif`,
+    body: `'Montserrat', sans-serif`,
+  },
 });
 
 export default theme;

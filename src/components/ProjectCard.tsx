@@ -21,9 +21,6 @@ const ProjectCard = ({ project }: Props) => {
         <Image src={project.image} />
         <CardBody>
           <Heading fontSize="2xl">{project.title}</Heading>
-          <Heading fontSize="1xl" paddingY={3}>
-            {project.date}
-          </Heading>
           <Text>{project.description}</Text>
         </CardBody>
       </Card>
