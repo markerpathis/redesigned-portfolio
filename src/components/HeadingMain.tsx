@@ -1,11 +1,21 @@
+import { ReactNode } from "react";
 import { Heading } from "@chakra-ui/react";
 
-const HeadingMain = () => {
-  const heading = "Hey there! I'm Parker.";
+interface Props {
+  children: ReactNode;
+  colorMode: string;
+}
 
+const HeadingMain = ({ children, colorMode }: Props) => {
+  let color1 = "#00F5A0";
+  let color2 = "#00D9F5";
+
+  colorMode === "dark" ? ((color1 = "#00F5A0"), (color2 = "#00D9F5")) : ((color1 = "#00B877"), (color2 = "#00A2B8"));
+
+  const gradient = "linear(to-l, " + color1 + ", " + color2 + ")";
   return (
-    <Heading as="h1" fontSize="5xl" bgGradient="linear(to-l, #00F5A0, #00D9F5)" bgClip="text">
-      {heading}
+    <Heading as="h1" fontSize="5xl" fontWeight="bold" bgGradient={gradient} bgClip="text">
+      {children}
     </Heading>
   );
 };

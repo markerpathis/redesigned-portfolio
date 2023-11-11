@@ -1,14 +1,13 @@
 import { HStack, Switch, Text, useColorMode } from "@chakra-ui/react";
 
 interface Props {
-  setCurrentColor: (currentColor: string) => void;
-  currentColor: string;
+  onColorModeSelect: (colorMode: string) => void;
 }
 
-const ColorModeSwitch = ({ setCurrentColor, currentColor }: Props) => {
+const ColorModeSwitch = ({ onColorModeSelect }: Props) => {
   const { toggleColorMode, colorMode } = useColorMode();
 
-  colorMode === "dark" ? setCurrentColor("dark") : setCurrentColor("light");
+  colorMode === "dark" ? onColorModeSelect("dark") : onColorModeSelect("light");
 
   return (
     <HStack>
