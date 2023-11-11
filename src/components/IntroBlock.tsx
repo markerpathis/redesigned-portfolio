@@ -6,10 +6,10 @@ const IntroBlock = () => {
     <>
       <HStack spacing={10}>
         <VStack boxSize="60%" alignItems="start">
-          <Heading as="h1" fontSize="5xl" bgGradient="linear(to-l, #00F5A0, #00D9F5)" bgClip="text">
+          <Heading as="h1" fontSize="5xl" fontWeight="bold" bgGradient="linear(to-l, #00F5A0, #00D9F5)" bgClip="text">
             Hey there! I'm Parker.
           </Heading>{" "}
-          <Text>
+          <Text >
             I'm a recent coding bootcamp grad, seeking a career as a full-stack developer. The coding bootcamp I completed was through the University of Washington (September 2022 - March 2023). Check
             out the portfolio below.
           </Text>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, Image, Heading, Text, HStack } from "@chakra-ui/react";
+import { Card, CardBody, Image, Heading, Text, HStack, Button, Link } from "@chakra-ui/react";
 
 interface Props {
   project: Project;
@@ -20,8 +20,40 @@ const ProjectCard = ({ project }: Props) => {
       <Card width="300px">
         <Image src={project.image} />
         <CardBody>
-          <Heading fontSize="2xl">{project.title}</Heading>
+          <Heading fontSize="xl" paddingBottom={2}>
+            {project.title}
+          </Heading>
           <Text>{project.description}</Text>
+          <HStack paddingTop={4}>
+            <Link href={project.githubUrl} target="_blank" rel="noreferrer">
+              <Button
+                size="sm"
+                color="gray.800"
+                fontWeight="medium"
+                bgGradient="linear(to-r, #00F5A0, #00D9F5)"
+                _hover={{
+                  bgGradient: "linear(to-r, #00D9F5, #00F5A0)",
+                  fontWeight: "black",
+                }}
+              >
+                GitHub Repo
+              </Button>
+            </Link>
+            <Link href={project.deployedUrl} target="_blank" rel="noreferrer">
+              <Button
+                size="sm"
+                color="gray.800"
+                fontWeight="normal"
+                bgGradient="linear(to-r, #00F5A0, #00D9F5)"
+                _hover={{
+                  bgGradient: "linear(to-r, #00D9F5, #00F5A0)",
+                  fontWeight: "black",
+                }}
+              >
+                Deployed App
+              </Button>
+            </Link>
+          </HStack>
         </CardBody>
       </Card>
     </>
