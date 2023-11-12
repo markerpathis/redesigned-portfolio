@@ -1,16 +1,17 @@
-import { HStack, Image, Box } from "@chakra-ui/react";
+import { HStack, Box, Link } from "@chakra-ui/react";
 import ColorModeSwitch from "./ColorModeSwitch";
-import logoLight from "../assets/nameLogoLight.png";
-import logoDark from "../assets/nameLogoDark.png";
 
 interface Props {
   onColorModeSelect: (colorMode: string) => void;
   colorMode: string;
 }
-const NavBar = ({ onColorModeSelect, colorMode }: Props) => {
+const NavBar = ({ onColorModeSelect }: Props) => {
   return (
-    <HStack padding="10px" justifyContent="space-between">
-      <Box>{colorMode === "dark" ? <Image src={logoLight} /> : <Image src={logoDark} />}</Box>
+    <HStack padding="40px" justifyContent="flex-end" spacing={20}>
+      <Link href="#about">About</Link>
+      <Link href="#skills">Skills</Link>
+      <Link href="#projects">Projects</Link>
+      <Link href="#contact">Contact</Link>
       <Box paddingRight={5}>
         <ColorModeSwitch onColorModeSelect={onColorModeSelect} />
       </Box>

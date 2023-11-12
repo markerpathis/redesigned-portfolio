@@ -1,4 +1,4 @@
-import { HStack, VStack, Text, Image } from "@chakra-ui/react";
+import { HStack, VStack, Text, Image, border } from "@chakra-ui/react";
 import ParkerPicture from "../assets/parkerImage.png";
 import HeadingMain from "./HeadingMain";
 
@@ -14,16 +14,19 @@ const IntroBlock = ({ colorMode }: Props) => {
 
   const textAbout = "I live on Camano Island, WA, with my wife (Joanna) and dog (Bruno). I love hockey (go Kraken!), biking, cooking/bbqing, video games, and board games.";
 
+  let borderColor = "#00F5A0";
+  colorMode === "dark" ? (borderColor = "#00F5A0") : (borderColor = "#00B877");
+
   return (
     <>
       <HStack spacing={10}>
-        <VStack boxSize="60%" alignItems="start">
+        <VStack alignItems="start">
           <HeadingMain colorMode={colorMode}>{textGreeting}</HeadingMain>
 
           <Text>{textIntro}</Text>
           <Text>{textAbout}</Text>
         </VStack>
-        <Image boxSize="300px" borderRadius={230} border="9px solid " borderColor="#00F5A0" src={ParkerPicture} />
+        <Image boxSize="300px" borderRadius={230} border="9px solid " borderColor={borderColor} src={ParkerPicture} />
       </HStack>
     </>
   );

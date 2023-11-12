@@ -1,12 +1,17 @@
 import { HStack, Text, Box } from "@chakra-ui/react";
+import GradientSideBar from "./GradientSideBar";
 
-const SkillsBlock = () => {
+interface Props {
+  colorMode: string;
+}
+
+const SkillsBlock = ({ colorMode }: Props) => {
   const content = "HTML, CSS, JavaScript, Express.js, React, Node.js, MongoDB, MySQL, Git, jQuery, Bootstrap, Tailwind, MUI, Chakra UI";
 
   return (
     <>
-      <HStack>
-        <Box w={1} h="100px" bgGradient="linear(to-r, #00F5A0, #00D9F5)" />
+      <HStack w="full">
+        <GradientSideBar colorMode={colorMode} height="100px" minheight="100px" />
         <Text>{content}</Text>
       </HStack>
     </>
