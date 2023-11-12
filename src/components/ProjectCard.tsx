@@ -28,11 +28,11 @@ const ProjectCard = ({ project }: Props) => {
             <Link href={project.githubUrl} target="_blank" rel="noreferrer">
               <Button
                 size="sm"
-                color="gray.800"
-                fontWeight="medium"
-                bgGradient="linear(to-r, #00F5A0, #00D9F5)"
+                color="white"
+                fontWeight="black"
+                bgGradient="linear(to-r, #011528, #365363)"
                 _hover={{
-                  bgGradient: "linear(to-r, #00D9F5, #00F5A0)",
+                  bgGradient: "linear(to-r, #011528, #68A2B8)",
                   fontWeight: "black",
                 }}
               >
@@ -42,11 +42,11 @@ const ProjectCard = ({ project }: Props) => {
             <Link href={project.deployedUrl} target="_blank" rel="noreferrer">
               <Button
                 size="sm"
-                color="gray.800"
-                fontWeight="normal"
-                bgGradient="linear(to-r, #00F5A0, #00D9F5)"
+                color="white"
+                fontWeight="black"
+                bgGradient="linear(to-r, #011528, #365363)"
                 _hover={{
-                  bgGradient: "linear(to-r, #00D9F5, #00F5A0)",
+                  bgGradient: "linear(to-r, #011528, #68A2B8)",
                   fontWeight: "black",
                 }}
               >

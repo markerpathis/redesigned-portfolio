@@ -15,7 +15,7 @@ const IntroBlock = ({ colorMode }: Props) => {
   const textAbout = "I live on Camano Island, WA, with my wife (Joanna) and dog (Bruno). I love hockey (go Kraken!), biking, cooking/bbqing, video games, and board games.";
 
   let borderColor = "#00F5A0";
-  colorMode === "dark" ? (borderColor = "#00F5A0") : (borderColor = "#00B877");
+  colorMode === "dark" ? (borderColor = "#9AD8D9") : (borderColor = "#9AD8D9");
 
   return (
     <>

@@ -7,10 +7,10 @@ interface Props {
 }
 
 const HeadingMain = ({ children, colorMode }: Props) => {
-  let color1 = "#00F5A0";
+  let color1 = "#68A2B8";
   let color2 = "#00D9F5";
 
-  colorMode === "dark" ? ((color1 = "#00F5A0"), (color2 = "#00D9F5")) : ((color1 = "#00B877"), (color2 = "#00A2B8"));
+  colorMode === "dark" ? ((color1 = "#9AD8D9"), (color2 = "#68A2B8")) : ((color1 = "#68A2B8"), (color2 = "#011528"));
 
   const gradient = "linear(to-l, " + color1 + ", " + color2 + ")";
   return (

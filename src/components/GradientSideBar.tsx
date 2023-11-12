@@ -7,10 +7,10 @@ interface Props {
 }
 
 const GradientSideBar = ({ colorMode, height, minheight }: Props) => {
-  let color1 = "#00F5A0";
-  let color2 = "#00D9F5";
+  let color1 = "#EA082A";
+  let color2 = "#EA082A";
 
-  colorMode === "dark" ? ((color1 = "#00F5A0"), (color2 = "#00D9F5")) : ((color1 = "#00B877"), (color2 = "#00A2B8"));
+  colorMode === "dark" ? ((color1 = "#EA082A"), (color2 = "#EA082A")) : ((color1 = "#EA082A"), (color2 = "#EA082A"));
 
   const gradient = "linear(to-l, " + color1 + ", " + color2 + ")";
 
