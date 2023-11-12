@@ -1,8 +1,9 @@
-import React from "react";
-import { Card, CardBody, Image, Heading, Text, HStack, Button, Link } from "@chakra-ui/react";
+import { Card, CardBody, Image, Heading, Text, HStack, Link } from "@chakra-ui/react";
+import ProjectCardButton from "./ProjectCardButton";
 
 interface Props {
   project: Project;
+  colorMode: string;
 }
 
 interface Project {
@@ -14,7 +15,7 @@ interface Project {
   image: string;
 }
 
-const ProjectCard = ({ project }: Props) => {
+const ProjectCard = ({ project, colorMode }: Props) => {
   return (
     <>
       <Card width="300px">
@@ -26,32 +27,10 @@ const ProjectCard = ({ project }: Props) => {
           <Text>{project.description}</Text>
           <HStack paddingTop={4}>
             <Link href={project.githubUrl} target="_blank" rel="noreferrer">
-              <Button
-                size="sm"
-                color="white"
-                fontWeight="black"
-                bgGradient="linear(to-r, #011528, #365363)"
-                _hover={{
-                  bgGradient: "linear(to-r, #011528, #68A2B8)",
-                  fontWeight: "black",
-                }}
-              >
-                GitHub Repo
-              </Button>
+              <ProjectCardButton colorMode={colorMode}>GitHub Repo</ProjectCardButton>
             </Link>
             <Link href={project.deployedUrl} target="_blank" rel="noreferrer">
-              <Button
-                size="sm"
-                color="white"
-                fontWeight="black"
-                bgGradient="linear(to-r, #011528, #365363)"
-                _hover={{
-                  bgGradient: "linear(to-r, #011528, #68A2B8)",
-                  fontWeight: "black",
-                }}
-              >
-                Deployed App
-              </Button>
+              <ProjectCardButton colorMode={colorMode}>Deployed App</ProjectCardButton>
             </Link>
           </HStack>
         </CardBody>

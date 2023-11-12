@@ -11,8 +11,9 @@ function App() {
 
   return (
     <>
-      <NavBar colorMode={colorMode} onColorModeSelect={(colorMode) => setColorMode(colorMode)} />
       <Container maxW="1500px">
+        <NavBar colorMode={colorMode} onColorModeSelect={(colorMode) => setColorMode(colorMode)} />
+
         <Box paddingY="50px" paddingX="15%">
           {/* INTRO AND PHOTO */}
           <Center id="about">
@@ -34,7 +35,7 @@ function App() {
               Projects
             </Heading>
             <Box>
-              <ProjectGrid />
+              <ProjectGrid colorMode={colorMode} />
             </Box>
           </VStack>
           {/* </Center> */}

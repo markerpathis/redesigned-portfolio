@@ -7,7 +7,7 @@ interface Props {
 }
 const NavBar = ({ onColorModeSelect }: Props) => {
   return (
-    <HStack padding="40px" justifyContent="flex-end" spacing={20}>
+    <HStack padding="40px" justifyContent={{ sm: "center", md: "flex-end" }} spacing={{ sm: 3, md: 10, lg: 20 }}>
       <Link href="#about">About</Link>
       <Link href="#skills">Skills</Link>
       <Link href="#projects">Projects</Link>

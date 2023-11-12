@@ -1,4 +1,4 @@
-import { HStack, VStack, Text, Image, border } from "@chakra-ui/react";
+import { HStack, VStack, Text, Image, Hide, Show, Box } from "@chakra-ui/react";
 import ParkerPicture from "../assets/parkerImage.png";
 import HeadingMain from "./HeadingMain";
 
@@ -19,15 +19,26 @@ const IntroBlock = ({ colorMode }: Props) => {
 
   return (
     <>
-      <HStack spacing={10}>
-        <VStack alignItems="start">
-          <HeadingMain colorMode={colorMode}>{textGreeting}</HeadingMain>
+      <VStack>
+        <HStack spacing={10}>
+          <VStack alignItems="start">
+            <HeadingMain colorMode={colorMode}>{textGreeting}</HeadingMain>
 
-          <Text>{textIntro}</Text>
-          <Text>{textAbout}</Text>
-        </VStack>
-        <Image boxSize="300px" borderRadius={230} border="9px solid " borderColor={borderColor} src={ParkerPicture} />
-      </HStack>
+            <Text>{textIntro}</Text>
+            <Text>{textAbout}</Text>
+          </VStack>
+          <Show above="xl">
+            <Image boxSize="300px" borderRadius={230} border="9px solid " objectFit="cover" borderColor={borderColor} src={ParkerPicture} />
+          </Show>
+        </HStack>
+
+        {/* Stacks image vertically under xl */}
+        <Hide above="xl">
+          <Box paddingTop={5}>
+            <Image boxSize="300px" borderRadius={230} border="9px solid " objectFit="cover" borderColor={borderColor} src={ParkerPicture} />
+          </Box>
+        </Hide>
+      </VStack>
     </>
   );
 };
