@@ -7,6 +7,7 @@ interface Props {
 }
 
 const GradientSideBar = ({ colorMode, height, minheight }: Props) => {
+  // updated to solid red for both the light and dark modes, but kept gradient setup in case this wants to be used in the future
   let color1 = "#EA082A";
   let color2 = "#EA082A";
 

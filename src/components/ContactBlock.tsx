@@ -1,4 +1,4 @@
-import { Flex, HStack, Image, Spacer, Text, VStack, Link } from "@chakra-ui/react";
+import { Flex, HStack, Image, Text, VStack, Link } from "@chakra-ui/react";
 import GradientSideBar from "./GradientSideBar";
 import LinkedInDark from "../assets/In-Blue-96.png";
 import LinkedInWhite from "../assets/In-White-96.png";
