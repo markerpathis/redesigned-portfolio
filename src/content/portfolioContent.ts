@@ -8,7 +8,7 @@ const portfolioContent = [
     title: "NHL Schedule",
     date: "September 2023",
     description: "View the NHL game schedule and scores",
-    deployedUrl: "https://markerpathis.github.io/nhl-api/",
+    deployedUrl: "https://nhl-schedule-475007c36c28.herokuapp.com/",
     githubUrl: "https://github.com/markerpathis/nhl-api",
     image: projectNhlApi,
   },
